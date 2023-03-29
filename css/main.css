@@ -711,7 +711,7 @@ label, legend {
     font-weight: bold;
     margin-bottom: .9rem;
     line-height: 1.714;
-    color: #000000;
+    color: #FFFFFF;
     display: block;
 }
 
@@ -2200,10 +2200,13 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #5da1a6;
+    background-color: #191717;
     color: #010507;
     position: relative;
 }
+z {
+}
+
 
 .s-about .section-header.has-bottom-sep::before {
     background-color: rgba(255, 255, 255, 0.25);
@@ -3260,16 +3263,8 @@ html.no-csstransitions .home-content__main {
     }
 }
 
-.s-head{
-	display: table-cell;
-    width: 100%;
-    height: 50%;
-    vertical-align: middle;
-    padding-bottom: 15.6rem;
-    position: relative;
-    overflow: hidden;
-	background-color: #5da1a6;
-}
+
+
 
 
 /* ------------------------------------------------------------------- 
@@ -3610,5 +3605,99 @@ footer .row {
     }
 }
 
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * list
+ * ------------------------------------------------------------------- */
+.listhead{
+    width: 100%;
+    height: 10%;
+    vertical-align: middle;
+    padding-bottom: 10.0rem;
+    position: relative;
+    overflow: hidden;
+    background-color: #191717;
+    display: flex;
+	
+		
+}
+
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+ /* border: 11px solid transparent; */
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #FFFFFF;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #DBE1DB;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #2E8E30;
+}
+
+.tabset > input:checked + label {
+    border-color: #B4191B;
+    border-bottom: 0px solid #fff;
+    margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+.liststyle li{
+    color: #FFFFFF;
+    font-family: Poppins;
+    text-align: left;
+}
 
 /*# sourceMappingURL=main.css.map */
